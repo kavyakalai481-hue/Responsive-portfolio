@@ -1,167 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport"content="width=device-width,initial-scale=1.0">
+      <title>Kavya's Portfolio</title>
+      <link rel="stylesheet"href="style.css">
+      </head>
 
-    <title>Kavya's Portfolio</title>
+    <body>
 
-    <meta name="description"
-          content="Kavya's portfolio showcasing projects, skills, and achievements in Computer Science Engineering.">
+      <header>
+        <nav>
+          <h1>Kavya </h1>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-<a href="#main-content" class="skip-link">
-    Skip to Main Content
-</a>
-
-<header>
-    <nav aria-label="Main Navigation">
-
-        <h1>Kavya</h1>
-
-        <ul>
+          <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+             <li><a href="#projects">Projects</a></li>
+             <li><a href="#skills">Skills</a></li>
+             <li><a href="#contact">Contact</a></li>
+          </ul>
+<button id="theme-toggle">🌙</button>
+        </nav>
+      </header>
 
-        <button id="theme-toggle" aria-label="Toggle Dark Mode">
-            🌙
-        </button>
+      <main>
 
-    </nav>
-</header>
+        <section class="hero">
+          <div>
+            <h2>Welcome to My Portfolio </h2>
+            <p> Computer Science Engineering Student 
+            </p>
+          </div>
+        </section>
 
-<main id="main-content">
+        <section id="about" class="about">
+          <div>
+            <h2> About Me</h2>
+            <p>
+              I am Kavya , a Computer Science Engineering Student
+              passionate about Web Developement , AI , and modern technologies.
+            </p>
+          </div>
+        </section>
 
-    <section class="hero">
-        <div>
-            <h2>Welcome to My Portfolio</h2>
-            <p>Computer Science Engineering Student</p>
-        </div>
-    </section>
+        <section id="projects">
+          <h2>Projects</h2>
+          
+          <div class="projects-grid">
 
-    <section id="about" class="about">
+            <div class="project-cards">
+              <h3>Portfolio Website</h3>
+              <p>Responsive portfolio using HTML and CSS3.</p>
+            </div>
 
-        <h2>About Me</h2>
+            <div class="project-card">
+              <h3>Calculator App</h3>
+              <p>Simple calculator built with HTML,CSS and JavaScript.</p>
+            </div>
 
-        <p>
-            I am Kavya, a Computer Science Engineering student passionate about
-            web development, programming, and emerging technologies. I enjoy
-            creating responsive websites and continuously improving my technical
-            skills through academic projects and practical learning experiences.
-        </p>
+            <div class="project-card">
+              <h3>Student Management System</h3>
+            <p>Academic project for managing student recors.</p>
+            </div>
 
-    </section>
+          </div>
+        </section>
+        
+        <section id="skills">
+          <h2>Skills</h2>
 
-    <section id="projects">
-
-        <h2>Projects</h2>
-
-        <div class="projects-grid">
-
-            <article class="project-card">
-                <h3>Portfolio Website</h3>
-                <p>
-                    Responsive portfolio built with HTML, CSS, and JavaScript.
-                </p>
-            </article>
-
-            <article class="project-card">
-                <h3>Calculator App</h3>
-                <p>
-                    Simple calculator using HTML, CSS, and JavaScript.
-                </p>
-            </article>
-
-            <article class="project-card">
-                <h3>Student Management System</h3>
-                <p>
-                    Academic project for managing student records efficiently.
-                </p>
-            </article>
-
-        </div>
-
-    </section>
-
-    <section id="skills">
-
-        <h2>Skills</h2>
-
-        <ul>
+          <ul>
             <li>HTML5</li>
             <li>CSS3</li>
             <li>JavaScript</li>
             <li>Python</li>
             <li>Java</li>
-            <li>C Programming</li>
-            <li>SQL</li>
-        </ul>
+          </ul>
+        </section>
 
-    </section>
+        <section id="contact">
+          <h2>Contact Me</h2>
 
-    <Contact Section >
-    <section id="contact">
+          <form>
+            <input type="text" placeholder="Your Name" required>
 
-        <h2>Contact Me</h2>
+            <input type="email" placeholder="Your Email" required>
 
-        <form>
+            <textarea rows="5" placeholder="Your Message"></textarea>
 
-            <label for="name">Name</label>
-            <input
-                type="text"
-                id="name"
-                name="name"
-                required>
+            <button type="submit">Send Message</button>
+          </form>
+        </section>
+        
+      </main>
 
-            <label for="email">Email</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                required>
+      <footer>
+        <p>&copy; 2026 Kavya. All Rights Reserved.
+        </p>
+      </footer>
 
-            <label for="message">Message</label>
-            <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required></textarea>
+      <script>
+        const toggleBtn = document.getElementById("theme-toggle");
 
-            <button type="submit">
-                Send Message
-            </button>
+        toggleBtn.addEvenListener("click",() => {
+          document.body.classList.toggle("dark-mode");
+        });
+      </script>
 
-        </form>
-
-    </section>
-
-</main>
-
-<footer>
-    <p>&copy; 2026 Kavya. All Rights Reserved.</p>
-</footer>
-
-<script>
-
-const toggleBtn = document.getElementById("theme-toggle");
-
-toggleBtn.addEventListener("click", () => {
-
-    document.body.classList.toggle("dark-mode");
-
-    if(document.body.classList.contains("dark-mode")){
-        toggleBtn.textContent = "☀️";
-    } else {
-        toggleBtn.textContent = "🌙";
-    }
-});
-</script>
-</body>
-</html>
-
+    </body>
+  </html>
