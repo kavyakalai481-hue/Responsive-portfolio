@@ -1,15 +1,28 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Kavya's Portfolio</title>
+
+    <meta name="description"
+          content="Kavya's portfolio showcasing projects, skills, and achievements in Computer Science Engineering.">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- Skip Link for Accessibility -->
+<a href="#main-content" class="skip-link">
+    Skip to Main Content
+</a>
+
 <header>
-    <nav>
+    <nav aria-label="Main Navigation">
+
         <h1>Kavya</h1>
 
         <ul>
@@ -19,12 +32,16 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <button id="theme-toggle">🌙</button>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">
+            🌙
+        </button>
+
     </nav>
 </header>
 
-<main>
+<main id="main-content">
 
+    <!-- Hero Section -->
     <section class="hero">
         <div>
             <h2>Welcome to My Portfolio</h2>
@@ -32,40 +49,55 @@
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
+
         <h2>About Me</h2>
+
         <p>
             I am Kavya, a Computer Science Engineering student passionate about
             web development, programming, and emerging technologies. I enjoy
             creating responsive websites and continuously improving my technical
             skills through academic projects and practical learning experiences.
         </p>
+
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
+
         <h2>Projects</h2>
 
         <div class="projects-grid">
 
-            <div class="project-card">
+            <article class="project-card">
                 <h3>Portfolio Website</h3>
-                <p>Responsive portfolio built with HTML, CSS, and JavaScript.</p>
-            </div>
+                <p>
+                    Responsive portfolio built with HTML, CSS, and JavaScript.
+                </p>
+            </article>
 
-            <div class="project-card">
+            <article class="project-card">
                 <h3>Calculator App</h3>
-                <p>Simple calculator using HTML, CSS, and JavaScript.</p>
-            </div>
+                <p>
+                    Simple calculator using HTML, CSS, and JavaScript.
+                </p>
+            </article>
 
-            <div class="project-card">
+            <article class="project-card">
                 <h3>Student Management System</h3>
-                <p>Academic project for managing student records efficiently.</p>
-            </div>
+                <p>
+                    Academic project for managing student records efficiently.
+                </p>
+            </article>
 
         </div>
+
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
+
         <h2>Skills</h2>
 
         <ul>
@@ -77,17 +109,43 @@
             <li>C Programming</li>
             <li>SQL</li>
         </ul>
+
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
+
         <h2>Contact Me</h2>
 
         <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
+
+            <label for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required>
+
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required>
+
+            <label for="message">Message</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
         </form>
+
     </section>
 
 </main>
@@ -97,11 +155,24 @@
 </footer>
 
 <script>
+
 const toggleBtn = document.getElementById("theme-toggle");
 
 toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark mode");
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        toggleBtn.textContent = "☀️";
+    } else {
+        toggleBtn.textContent = "🌙";
+    }
+
 });
+
 </script>
+
 </body>
 </html>
+```
+
