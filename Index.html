@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavya's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>Kavya</h1>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button id="theme-toggle">🌙</button>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div>
+            <h2>Welcome to My Portfolio</h2>
+            <p>Computer Science Engineering Student</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            I am Kavya, a Computer Science Engineering student passionate about
+            web development, programming, and emerging technologies. I enjoy
+            creating responsive websites and continuously improving my technical
+            skills through academic projects and practical learning experiences.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Responsive portfolio built with HTML, CSS, and JavaScript.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Calculator App</h3>
+                <p>Simple calculator using HTML, CSS, and JavaScript.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Student Management System</h3>
+                <p>Academic project for managing student records efficiently.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C Programming</li>
+            <li>SQL</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Kavya. All Rights Reserved.</p>
+</footer>
+
+<script>
+const toggleBtn = document.getElementById("theme-toggle");
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+});
+</script>
+
+</body>
+</html>
